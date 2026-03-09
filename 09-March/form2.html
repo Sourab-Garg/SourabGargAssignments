@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Advanced Form Elements</title>
+</head>
+<body bgcolor="pink">
+    <form action="indexForm.html" method="get">
+        <center><h2>Investment Details</h2></center>
+        
+        <p><b>Investment advice for others:</b></p>
+        <textarea name="advice" rows="7" cols="30">Type here...</textarea>
+
+        <p><b>How do you buy your stocks?</b>
+        <select name="buy_method">
+            <option value="">--Select--</option>
+            <option>Online Trading</option>
+            <option>Brokerage Firm</option>
+            <option>Mobile App</option>
+        </select></p>
+
+        <p><b>Select Courses (Hold Ctrl to select multiple):</b><br>
+        <select name="course" multiple size="5">
+            <optgroup label="Web Development">
+                <option>HTML</option>
+                <option>JavaScript</option>
+                <option selected>Web Design</option>
+            </optgroup>
+            <optgroup label="Programming">
+                <option>C++</option>
+                <option>Java</option>
+            </optgroup>
+        </select></p>
+
+        <button type="submit">Submit and Go Back to Layouts</button>
+        <button type="reset">Reset Everything</button>
+    </form>
+</body>
+</html>
