@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Q1 Booking/Q1 Booking.csproj" />
+  <Project Path="Q2 Trendy Numbers/Q2 Trendy Numbers.csproj" />
+  <Project Path="Q3 Remove Duplicates/Q3 Remove Duplicates.csproj" />
+  <Project Path="Q4 Only Alphabets/Q4 Only Alphabets.csproj" />
+  <Project Path="Q5 Candle/Q5 Candle.csproj" Id="47b3a2ea-2dd3-48ac-a7a7-d177b0bec8ae" />
+  <Project Path="Q6 Diagonal/Q6 Diagonal.csproj" Id="21c162da-d6be-4d5c-94eb-6c6490ca1b93" />
+</Solution>

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Q1.1/Q1.1.csproj" Id="c7349be0-fdae-4e15-beed-c237c0f0689a" />
+  <Project Path="Q1/Q1.csproj" />
+  <Project Path="Q2/Q2.csproj" />
+  <Project Path="Q3/Q3.csproj" />
+</Solution>

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ClassInstanceResfernceVariable/ClassInstanceResfernceVariable.csproj" Id="cf44ec6e-6924-45a2-953d-4557c524eb0a" />
+  <Project Path="Day10CustomerViaLINQ/Day10CustomerViaLINQ.csproj" />
+  <Project Path="LINQDemo/LINQDemo.csproj" Id="72913701-0175-4459-abd3-d6f8c9faaabc" />
+  <Project Path="LinqToObejcts/LinqToObejcts.csproj" />
+  <Project Path="StructDemo/StructDemo.csproj" />
+</Solution>

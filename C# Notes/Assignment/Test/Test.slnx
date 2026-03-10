@@ -1,0 +1,17 @@
+<Solution>
+  <Project Path="AbstractClassFxn/AbstractClassFxn.csproj" Id="b4f8a15a-481e-496b-ad4e-71fee86c14ec" />
+  <Project Path="ArraysDemo/ArraysDemo.csproj" />
+  <Project Path="BoxingUnboxingDemo/BoxingUnboxingDemo.csproj" Id="b1975135-e940-4f05-a9f2-224f9b626038" />
+  <Project Path="ClassCurd/ClassCurd.csproj" Id="a5f9c8a7-0e12-4813-9fcf-4d83832bbe1b" />
+  <Project Path="CompileTimePoly/CompileTimePoly.csproj" Id="afea0d15-a35d-4be9-bbaa-0f48344be9f2" />
+  <Project Path="Day1/Day1.csproj" />
+  <Project Path="DelegateDemo/DelegateDemo.csproj" Id="ef74116b-00d2-43b7-a172-676a54cdc869" />
+  <Project Path="enumDemo/enumDemo.csproj" Id="9ffb71fa-fa2c-4941-a539-ead6e61ec772" />
+  <Project Path="GetterSetter/GetterSetter.csproj" Id="c4af9354-ad25-4b26-9644-d63cc397b303" />
+  <Project Path="Interface/InterfaceDemo.csproj" Id="7c0a930c-d454-431a-9cb1-d1a29814d58c" />
+  <Project Path="Library/Library.csproj" Id="8ae20123-a0c8-4c3e-9856-ce71e6cc88ea" />
+  <Project Path="RunTimePoly/RunTimePoly.csproj" Id="3bb20471-2aa7-4a63-be59-5e19c781c799" />
+  <Project Path="StaticFxn/StaticFxn.csproj" Id="0d277bea-1070-4238-9e52-52e058c3b059" />
+  <Project Path="StaticVar/StaticVar.csproj" Id="be408719-82d6-41a5-9b5a-17cb27465ec7" />
+  <Project Path="VirtualFxn/VirtualFxn.csproj" Id="c28fb4c0-7c10-4bdf-843b-634d51c8a9e9" />
+</Solution>

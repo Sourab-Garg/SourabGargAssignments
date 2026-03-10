@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="C#V12NewFeatures/C#V12NewFeatures.csproj" />
+  <Project Path="LocalFunctionDemo/LocalFunctionDemo.csproj" />
+  <Project Path="RegexDemo/RegexDemo.csproj" />
+  <Project Path="UsingStaticClassDemo/UsingStaticClassDemo.csproj" />
+</Solution>

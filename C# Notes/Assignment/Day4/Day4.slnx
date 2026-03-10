@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="AccessSpecifiers/AccessSpecifiers.csproj" Id="18873e27-df2f-4da8-812b-7ef6599c59b3" />
+  <Project Path="ClassLibrary2/ClassLibrary2.csproj" Id="05f91e1e-721c-4655-899c-ff55ef08403f" />
+  <Project Path="Exception/ExceptionDemoC.csproj" />
+  <Project Path="ExceptionDemoW/ExceptionDemoW.csproj" />
+  <Project Path="ExceptionHandleWC/ExceptionHandleWC.csproj" />
+  <Project Path="WebApplication1/KerstralDemo.csproj" />
+</Solution>

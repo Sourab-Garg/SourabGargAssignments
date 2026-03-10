@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="AbstractClassDemo/AbstractClassDemo.csproj" />
+  <Project Path="EmpManagement/EmpManagement.csproj" Id="b1053463-50aa-4501-8239-c0db853ffecf" />
+  <Project Path="FxnOverloading/FxnOverloading.csproj" Id="415b2b26-629f-4588-9954-4376db962370" />
+  <Project Path="InheritanceDemo/InheritanceDemo.csproj" />
+  <Project Path="InheritanceDemoDesktop/InheritanceDemoDesktop.csproj" />
+  <Project Path="OperatorOverloading/OperatorOverloading.csproj" Id="d34dc765-bf37-4beb-a87e-85603090d93f" />
+  <Project Path="VirtualFxnDemo/VirtualFxnDemo.csproj" Id="e93193ee-bad2-4480-b355-2724cae7d6c9" />
+</Solution>

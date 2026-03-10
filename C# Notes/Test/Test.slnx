@@ -1,0 +1,18 @@
+<Solution>
+  <Project Path="tesst11/tesst11.csproj" Id="46b65c85-e474-48cc-9aec-ec0188adf94e" />
+  <Project Path="Test1/Test1.csproj" />
+  <Project Path="test10/test10.csproj" Id="598b8ff7-1d1b-460e-a375-da336cdb8cf3" />
+  <Project Path="test12/test12.csproj" Id="c84249a8-63b5-4835-ad67-a4a452cb8094" />
+  <Project Path="test13/test13.csproj" Id="ac3f549a-b993-4b1e-9e53-955f692f3624" />
+  <Project Path="test14/test14.csproj" Id="f765de66-1100-4406-aef9-89fecc1d2845" />
+  <Project Path="test15/test15.csproj" Id="79a49624-ea7f-4f57-97d2-f498f80a31dc" />
+  <Project Path="Test16/Test16.csproj" Id="1d4bb4aa-06cd-4e1e-8135-c3a82bb0768e" />
+  <Project Path="test2/test2.csproj" Id="a31892ad-aae4-41a2-b499-00b911730328" />
+  <Project Path="Test3/Test3.csproj" Id="5e786fb6-827f-4357-8d46-d767e7bb62d3" />
+  <Project Path="Test4/Test4.csproj" Id="944545b8-114a-42e5-97c7-614570155f5e" />
+  <Project Path="Test5/Test5.csproj" Id="5bd8d81f-5abf-41bd-b610-a72bf04ab351" />
+  <Project Path="Test6/Test6.csproj" Id="e2670400-afad-44dd-a593-3cb897678f0c" />
+  <Project Path="test7/test7.csproj" Id="d139c6f1-0510-4dab-9023-cbfe2f629cdf" />
+  <Project Path="test8/test8.csproj" Id="fb3c72cf-6a6d-4454-b569-edffbaf4c3c2" />
+  <Project Path="Test9/Test9.csproj" Id="f6bea95a-dec6-4550-b0da-440d0b14b631" />
+</Solution>

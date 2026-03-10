@@ -1,0 +1,13 @@
+<Solution>
+  <Project Path="GarbageCollectorDemo2/GarbageCollectorDemo2.csproj" />
+  <Project Path="GarbageCollectorDemoW/GarbageCollectorDemoW.csproj" />
+  <Project Path="IndexerDemo/IndexerDemo.csproj" Id="2b659c78-1324-4d71-83dc-99f5386196f5" />
+  <Project Path="IsAsDemo/IsAsDemo.csproj" />
+  <Project Path="NonGeneericHashTable/NonGeneericHashTable.csproj" Id="ed901db6-fe0f-4e3b-98f1-2acc596fd072" />
+  <Project Path="NonGenericArrayList/NonGenericArrayList.csproj" Id="774c7cab-d909-4a9d-b833-c273302fbffa" />
+  <Project Path="ParamsDemo/ParamsDemo.csproj" />
+  <Project Path="ParseConvertDemo/ParseConvertDemo.csproj" />
+  <Project Path="PartialClassDemo/PartialClassDemo.csproj" />
+  <Project Path="promotionViaDelegate/promotionViaDelegate.csproj" />
+  <Project Path="TryParse/TryParse.csproj" />
+</Solution>

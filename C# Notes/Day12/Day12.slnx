@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="FileHandlingConsole/FileHandlingConsole.csproj" />
+  <Project Path="FIleHandlingWinForm/FIleHandlingWinForm.csproj" />
+  <Project Path="LoggingDemo/LoggingDemo.csproj" Id="9d4d8fad-ed41-4f20-b73e-ed0104b76d26" />
+</Solution>

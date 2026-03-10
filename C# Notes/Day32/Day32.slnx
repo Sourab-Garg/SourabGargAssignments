@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="InumerableDemo/InumerableDemo.csproj" />
+  <Project Path="INumeratorDemo2/INumeratorDemo2.csproj" />
+  <Project Path="LazyLINQDemo/LazyLINQDemo.csproj" />
+  <Project Path="NavigationPropertiesInClassDemo1/NavigationPropertiesInClassDemo1.csproj" />
+</Solution>

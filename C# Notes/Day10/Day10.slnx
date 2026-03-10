@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="GenericDictonaryDemo/GenericDictonaryDemo.csproj" Id="62f8738d-a266-4b18-a7b1-aaf1a1950445" />
+  <Project Path="GenericListDemo/GenericListDemo.csproj" />
+  <Project Path="IComparableDemo/IComparableDemo.csproj" Id="f1b6f57e-c5bb-46c4-995b-6ccc3432c7b5" />
+  <Project Path="QueueDemo/QueueDemo.csproj" Id="c05193dd-f7ac-4719-a07f-e7d4021796c1" />
+  <Project Path="StackDemo/StackDemo.csproj" Id="0e85beb7-41ea-4475-9f77-21da816daafb" />
+  <Project Path="StrinfArray/StrinfArray.csproj" Id="90191995-d194-418e-b6fd-be9c9f040221" />
+  <Project Path="UpperCase/UpperCase.csproj" Id="cddf420a-66bd-422f-9590-85a0eddda91b" />
+  <Project Path="Vowels/Vowels.csproj" Id="39ed44d5-4ccd-4355-870a-ab51a26614cc" />
+</Solution>

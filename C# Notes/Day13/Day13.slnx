@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="linqDemo/linqDemo.csproj" Id="4b1933f1-1f66-4b83-9b0a-6451a44e36c0" />
+  <Project Path="SerializationConsoleDemo/SerializationConsoleDemo.csproj" Id="859e052d-0e6b-424c-b2f0-8348210a8fc4" />
+  <Project Path="SerializationDemo/SerializationDemo.csproj" />
+</Solution>

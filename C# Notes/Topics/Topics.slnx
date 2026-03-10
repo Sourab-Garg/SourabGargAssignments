@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Abstraction/Abstraction.csproj" Id="5d53733d-1bfc-49dd-b507-0bfdcdad7c88" />
+  <Project Path="Delegate/Delegate.csproj" />
+  <Project Path="ExceptionHandling/ExceptionHandling.csproj" />
+  <Project Path="GenericClasses/GenericClasses.csproj" Id="2d609837-5432-40f5-9b7a-3388e21b1ee1" />
+  <Project Path="Interface/Interface.csproj" />
+  <Project Path="Regex/RegexDemo.csproj" Id="e580e99b-1b6f-4742-a963-bff26c908f99" />
+</Solution>

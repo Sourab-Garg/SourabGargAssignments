@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Input</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        function add() {
+            var total;
+            var first = parseFloat(document.getElementById("text1").value);
+            var second = parseFloat(document.getElementById("text2").value);
+            total = first + second;
+            alert('the total is ' + total);
+
+        }
+
+        function add1() {
+            var firstElement = document.getElementsByName("first")[0];
+            var secondElement = document.getElementsByName("second")[0];
+
+            var first = parseFloat(firstElement.value);
+            var second = parseFloat(secondElement.value);
+
+            var total = first + second;
+
+            if (isNaN(total)) {
+                alert("Please enter numbers in both fields.");
+            } else {
+                alert('The total is: ' + total);
+            }
+        }
+    </script>
+
+    <pre>
+        1st Number:  <input type="text" id="text1" name="first" placeholder="e.g. 8.00">
+        2nd Number: <input type="text" id="text2" name="second" placeholder="e.g. 17.80">
+
+        <input type="button" value="Calculate Total" onclick="add()">
+    </pre>
+
+</body>
+</html>

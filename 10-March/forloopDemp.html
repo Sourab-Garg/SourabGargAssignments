@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop Array List</title>
+</head>
+<body>
+    <h1>Array Elements</h1>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        #itemList {
+            background-color: #2d2d2d;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        #itemList li {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #3d3d3d;
+            border-radius: 3px;
+        }
+    </style>
+    <ul id="itemList"></ul>
+    <script>
+        const fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Grape'];
+        const list = document.getElementById('itemList');
+
+        for (let i = 0; i < fruits.length; i++) {
+            const listItem = document.createElement('li');
+            listItem.textContent = fruits[i];
+            list.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

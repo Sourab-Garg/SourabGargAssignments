@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="CustomExceptionDemo1/CustomExceptionDemo1.csproj" Id="6d5e030a-28cc-4862-a508-1d733d469e07" />
+  <Project Path="CustomExceptopnTest1/CustomExceptopnTest1.csproj" Id="740819a2-579b-4354-a17c-15e0d0569d21" />
+  <Project Path="DelegateDemo1/DelegateDemo1.csproj" Id="cc00de4f-a72b-4ea0-894b-ac97bc6051be" />
+  <Project Path="InterfaceDemo1/InterfaceDemo1.csproj" Id="84f40bc9-45f0-45d8-b32d-711da976e09f" />
+  <Project Path="InterfaceDemo2/InterfaceDemo2.csproj" Id="53b50118-e184-4ce1-86ae-aec32aee2615" />
+  <Project Path="Test1/Test1.csproj" />
+  <Project Path="Test2/Test2.csproj" Id="583dfd73-6c63-4519-a348-19c1c29fcfbd" />
+  <Project Path="Test3/Test3.csproj" Id="c40d2685-2510-428a-9a18-e8493ba862c9" />
+  <Project Path="Test4/Test4.csproj" Id="9f8aa8b2-dbc9-4938-974e-cfc35b919aca" />
+</Solution>

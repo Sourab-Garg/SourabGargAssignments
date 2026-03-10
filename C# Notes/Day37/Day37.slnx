@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ERDemo/ERDemo.csproj" />
+  <Project Path="LINQDemo/LINQDemo.csproj" Id="a5504f7b-eab0-4f38-8c72-b187bd0a097f" />
+</Solution>

@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="classObjectDemo/classObjectDemo.csproj" Id="dc16bfa7-13b0-4582-b2bd-d299b447ba0d" />
+  <Project Path="Day2/Day2.csproj" />
+  <Project Path="doWhileSwitch/doWhileSwitch.csproj" />
+  <Project Path="forLoop/forLoop.csproj" />
+  <Project Path="jumpStatements/jumpStatements.csproj" />
+  <Project Path="newDemoProject/newDemoProject.csproj" />
+  <Project Path="WinFormsApp1/WinFormsApp1.csproj" Id="58f38829-d2ac-4d0e-9b8b-9264d371d417" />
+</Solution>

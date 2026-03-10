@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Day1/If.csproj" />
+  <Project Path="Switch/Switch.csproj" />
+</Solution>

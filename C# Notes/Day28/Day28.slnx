@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="LinkedListDemo/LinkedListDemo.csproj" />
+  <Project Path="LinqToFileDemo/LinqToFileDemo.csproj" />
+  <Project Path="QueueDemo/QueueDemo.csproj" Id="11c8745c-a5a1-407c-bbb6-bc96b15e42cd" />
+  <Project Path="StackDemo/StackDemo.csproj" Id="7205b709-4b35-4e07-812c-c1cc846e9c15" />
+  <Project Path="StackQueueOperation/StackQueueOperation.csproj" />
+  <Project Path="WindowsFormsApp1/WindowsFormsApp1.csproj" Id="cd3d8486-1f61-4c1c-9324-50aa5296feec" />
+</Solution>

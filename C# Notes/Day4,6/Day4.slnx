@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="Array2D/Array2D.csproj" />
+  <Project Path="Arrays/Arrays.csproj" />
+  <Project Path="BoxingUnboxing/BoxingUnboxing.csproj" />
+  <Project Path="DynamicVar/DynamicVar.csproj" />
+  <Project Path="JaggedArray/JaggedArray.csproj" />
+  <Project Path="NamedOptionalParameterDemo/NamedOptionalParameterDemo.csproj" Id="76fc3af3-4746-486d-ba85-9920e265b2d7" />
+  <Project Path="StaticFunction/StaticFunction.csproj" Id="77db2304-4cb6-4e6e-a256-39d6d70288c6" />
+  <Project Path="StaticVariableDemo/StaticVariableDemo.csproj" />
+  <Project Path="StringFxn/StringFxn.csproj" Id="64e8a604-872d-4018-aefd-fcb06b80ecc9" />
+</Solution>

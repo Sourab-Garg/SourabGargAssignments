@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="AsyncAwaitDemo/AsyncAwaitDemo.csproj" Id="5dd0d571-90e9-447b-b65b-ac59f9849468" />
+  <Project Path="ExpressionBodyMethods/ExpressionBodyMethods.csproj" />
+  <Project Path="PatternMatchingDemo/PatternMatchingDemo.csproj" />
+  <Project Path="Record Demo/Record Demo.csproj" />
+  <Project Path="ThreadDemo2/ThreadDemo2.csproj" Id="e40849f3-181c-4768-888e-e73a990a7c7e" />
+  <Project Path="ThreadingDemo/ThreadingDemo.csproj" Id="22d075d9-a1dd-4ead-81d1-27414660d3f2" />
+  <Project Path="ThreadJoinDemo/ThreadJoinDemo.csproj" Id="6d8dd321-d99c-4919-9241-ab5ef1e1ed7a" />
+  <Project Path="ThreadJoinDemo2/ThreadJoinDemo2.csproj" Id="1f41d2fa-1ca3-4a9c-83e6-5b09fa275999" />
+  <Project Path="TuplesDemo/TuplesDemo.csproj" />
+</Solution>

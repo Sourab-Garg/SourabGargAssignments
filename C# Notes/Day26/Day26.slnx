@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="factRec/factRec.csproj" />
+  <Project Path="timeComp/timeComp.csproj" />
+</Solution>

@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="AirthmeticOpsAndAnother/AirthmeticOpsAndAnother.csproj" />
+  <Project Path="MockTesting/MockTesting.csproj" Id="63ec2793-b85d-4e05-9b28-f3d0b232ae39" />
+  <Project Path="TestProject1/TestProject1.csproj" />
+  <Project Path="TestProject1NTest/TestProject1NTest.csproj" />
+  <Project Path="TestProject2/TestProject2.csproj" />
+  <Project Path="TestProject3Nunit/TestProject3Nunit.csproj" Id="5554d17a-aa88-4200-b95f-57ddc893160d" />
+  <Project Path="TestProject3Test/TestProject3Test.csproj" Id="de7c63c3-cbf8-48c4-8561-3da37f48a8eb" />
+</Solution>

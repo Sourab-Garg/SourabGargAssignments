@@ -1,0 +1,13 @@
+<Solution>
+  <Project Path="AnonyomousDeligate/AnonyomousDeligate.csproj" />
+  <Project Path="ConstructorDemo/ConstructorDemo.csproj" Id="9657c27d-5318-4145-b86e-59c23f408cd3" />
+  <Project Path="DeligatesDemo/DeligatesDemo.csproj" />
+  <Project Path="EnumGetterSetter/EnumGetterSetter.csproj" Id="c9d300ac-879b-4dae-bbf5-47a7397728ea" />
+  <Project Path="EnumsDemo/EnumsDemo.csproj" Id="593a0063-571c-406c-b4b7-e24719b24d59" />
+  <Project Path="EventDelegate/EventDelegate.csproj" />
+  <Project Path="ExtensionDemo/ExtensionDemo.csproj" Id="15079845-db60-4e55-ae1c-0893beb96ec6" />
+  <Project Path="GenericsDemo/GenericsDemo.csproj" />
+  <Project Path="GetterSetter/GetterSetter.csproj" Id="c92309d3-5488-45ed-a145-0d079fae77a5" />
+  <Project Path="InbuiltDelegate/InbuiltDelegate.csproj" />
+  <Project Path="LambdaDelegate/LambdaDelegate.csproj" />
+</Solution>

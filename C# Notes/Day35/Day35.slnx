@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="BinaryTreeDemo/BinaryTreeDemo.csproj" />
+  <Project Path="BinaryTreeDemo2/BinaryTreeDemo2.csproj" />
+  <Project Path="HackerRank1/HackerRank1.csproj" Id="d4735166-fd1b-4dc8-ba59-9681d1c0d832" />
+  <Project Path="Q1/Q1.csproj" Id="79744bf7-33e5-4fac-89c7-def8f1f0fa3e" />
+  <Project Path="Q2/Q2.csproj" Id="85654668-c352-41d6-a4a7-27dd2da591fe" />
+  <Project Path="Q3/Q3.csproj" Id="daf76295-559e-4103-bfa6-efde7c1346ac" />
+  <Project Path="Q4/Q4.csproj" Id="36950e86-3461-4a89-a452-a0a0300de2fa" />
+  <Project Path="Q5/Q5.csproj" Id="d625d21d-76f9-45f9-ab74-d26508b096ca" />
+</Solution>
