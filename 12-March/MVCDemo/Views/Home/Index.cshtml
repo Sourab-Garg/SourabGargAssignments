@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 80px 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 40px 0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-section h1 {
+        color: white;
+        font-size: 48px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .hero-section p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .hero-button {
+        display: inline-block;
+        padding: 18px 50px;
+        background-color: #ff6b6b;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    }
+
+    .hero-button:hover {
+        background-color: #ff5252;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        text-decoration: none;
+        color: white;
+    }
+
+    .welcome-section {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .welcome-section h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .welcome-section p {
+        color: #666;
+        font-size: 16px;
+    }
+</style>
+
+<div class="welcome-section">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="hero-section">
+    <h1>Explore Our Organization</h1>
+    <p>View all departments and manage employee information</p>
+    <a class="hero-button" asp-area="" asp-controller="Home" asp-action="ViewDepartments">
+        Show Departments
+    </a>
+</div>
