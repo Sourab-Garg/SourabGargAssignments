@@ -1,4 +1,4 @@
-namespace MVCDemo
+namespace StudentCourseList
 {
     public class Program
     {
@@ -28,7 +28,7 @@ namespace MVCDemo
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Enrollment}/{action=Index}/{id?}");
 
             app.Run();
         }
