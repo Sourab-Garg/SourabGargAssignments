@@ -1,0 +1,80 @@
+# Diabetes Thesis v2 - Configuration
+data:
+  path: "diabetes.csv"        # Path to the PIMA-like CSV dataset
+  target_col: "Outcome"
+  test_size: 0.20
+  random_state: 42
+  # Columns where 0 is physiologically impossible (treated as missing)
+  zero_invalid_cols:
+    - Glucose
+    - BloodPressure
+    - SkinThickness
+    - Insulin
+    - BMI
+
+preprocessing:
+  imputation_strategy: "median"   # median or mean
+  use_smote: true
+  smote_random_state: 42
+
+feature_selection:
+  enabled: true
+  method: "rfe"                   # rfe only for now
+  n_features: 6
+  rfe_estimator: "logistic"       # logistic regression as RFE estimator
+
+models:
+  xgboost:
+    param_grid:
+      n_estimators: [100, 200]
+      max_depth: [3, 5]
+      learning_rate: [0.05, 0.1]
+      subsample: [0.8, 1.0]
+      colsample_bytree: [0.8, 1.0]
+    cv: 5
+    scoring: "f1"
+
+  knn:
+    param_grid:
+      n_neighbors: [3, 5, 7, 9, 11]
+      weights: ["uniform", "distance"]
+      metric: ["euclidean", "manhattan"]
+    cv: 5
+    scoring: "f1"
+
+  dnn:
+    epochs: 150
+    batch_size: 32
+    validation_split: 0.2
+    patience: 15           # early stopping patience
+    hidden_layers: [64, 32, 16]
+    dropout_rate: 0.2
+
+  random_forest:
+    n_estimators: 200
+    max_depth: 10
+    random_state: 42
+
+  logistic_regression:
+    max_iter: 1000
+    random_state: 42
+
+ensemble:
+  # Weights for thesis track hybrid ensemble: [LR, RF, XGBoost]
+  # These are optimised automatically during training but can be overridden here.
+  weights: null                   # null = learn from val performance (F1-weighted)
+
+evaluation:
+  metrics: ["accuracy", "precision", "recall", "f1"]
+  save_csv: true
+  metrics_csv: "artifacts/metrics.csv"
+  plot_png: "artifacts/performance_plot.png"
+
+artifacts:
+  dir: "artifacts"
+  imputer: "artifacts/imputer.pkl"
+  scaler: "artifacts/scaler.pkl"
+  feature_mask: "artifacts/feature_mask.pkl"
+  ensemble_weights: "artifacts/ensemble_weights.pkl"
+  model_prefix: "artifacts/model_"   # e.g. artifacts/model_xgboost.pkl
+  dnn_dir: "artifacts/model_dnn"
