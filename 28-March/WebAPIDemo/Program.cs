@@ -38,10 +38,7 @@ namespace WebAPIDemo
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
             app.UseCors("AllowFrontend");
-            app.UseRouting();
-            app.UseAuthorization();
             app.MapControllers();
             app.Run();
         }
