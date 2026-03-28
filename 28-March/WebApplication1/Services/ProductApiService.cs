@@ -1,11 +1,12 @@
-﻿using WebApplication1.Models;
+using WebApplication1.Models;
 using System.Text.Json;
+using System.Text;
 
 namespace WebApplication1.Services
 {
     public interface IProductApiService
     {
-        Task<IEnumerable<ProductViewModel>> GetAllProductsAsync();
+        Task<List<ProductViewModel>> GetAllProductsAsync();
         Task<ProductViewModel?> GetProductByIdAsync(int id);
         Task<ProductViewModel> CreateProductAsync(ProductViewModel product);
         Task<ProductViewModel> UpdateProductAsync(int id, ProductViewModel product);
@@ -15,43 +16,34 @@ namespace WebApplication1.Services
     public class ProductApiService : IProductApiService
     {
         private readonly HttpClient _httpClient;
-        private readonly IConfiguration _configuration;
-        private readonly ILogger<ProductApiService> _logger;
+        private readonly string _apiUrl;
+        private readonly JsonSerializerOptions _jsonOptions;
 
-        private readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
-        {
-            PropertyNameCaseInsensitive = true,
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-        };
-
-        public ProductApiService(HttpClient httpClient, IConfiguration configuration, ILogger<ProductApiService> logger)
+        public ProductApiService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
-            _configuration = configuration;
-            _logger = logger;
+            _apiUrl = configuration["ApiSettings:BaseUrl"] ?? "https://localhost:7085";
+            _jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         }
 
-        private string GetApiUrl() => _configuration["ApiSettings:BaseUrl"] ?? "https://localhost:7085";
-
-        public async Task<IEnumerable<ProductViewModel>> GetAllProductsAsync()
+        public async Task<List<ProductViewModel>> GetAllProductsAsync()
         {
             try
             {
-                var url = $"{GetApiUrl()}/api/products";
+                var url = $"{_apiUrl}/api/products";
                 var response = await _httpClient.GetAsync(url);
 
                 if (!response.IsSuccessStatusCode)
                     return new List<ProductViewModel>();
 
                 var json = await response.Content.ReadAsStringAsync();
-                var result = JsonSerializer.Deserialize<IEnumerable<ProductViewModel>>(json, _jsonOptions) ?? new List<ProductViewModel>();
+                var products = JsonSerializer.Deserialize<List<ProductViewModel>>(json, _jsonOptions);
 
-                return result;
+                return products ?? new List<ProductViewModel>();
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError($"Error fetching products from API: {ex.Message}");
-                throw new Exception($"Error fetching products from API: {ex.Message}", ex);
+                return new List<ProductViewModel>();
             }
         }
 
@@ -59,11 +51,8 @@ namespace WebApplication1.Services
         {
             try
             {
-                var url = $"{GetApiUrl()}/api/products/{id}";
+                var url = $"{_apiUrl}/api/products/{id}";
                 var response = await _httpClient.GetAsync(url);
-
-                if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-                    return null;
 
                 if (!response.IsSuccessStatusCode)
                     return null;
@@ -71,10 +60,9 @@ namespace WebApplication1.Services
                 var json = await response.Content.ReadAsStringAsync();
                 return JsonSerializer.Deserialize<ProductViewModel>(json, _jsonOptions);
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError($"Error fetching product with id {id} from API: {ex.Message}");
-                throw new Exception($"Error fetching product with id {id} from API: {ex.Message}", ex);
+                return null;
             }
         }
 
@@ -82,32 +70,22 @@ namespace WebApplication1.Services
         {
             try
             {
-                var url = $"{GetApiUrl()}/api/products";
-                _logger.LogInformation($"Creating product at: {url}");
-
+                var url = $"{_apiUrl}/api/products";
                 var json = JsonSerializer.Serialize(product);
-                _logger.LogInformation($"Request body: {json}");
-
-                var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await _httpClient.PostAsync(url, content);
+                var responseJson = await response.Content.ReadAsStringAsync();
 
                 if (!response.IsSuccessStatusCode)
-                {
-                    var errorContent = await response.Content.ReadAsStringAsync();
-                    _logger.LogError($"API returned status code: {response.StatusCode}. Content: {errorContent}");
-                    throw new Exception($"API returned {response.StatusCode}: {errorContent}");
-                }
+                    return product;
 
-                var responseJson = await response.Content.ReadAsStringAsync();
-                _logger.LogInformation($"Product created successfully. Response: {responseJson}");
-
-                return JsonSerializer.Deserialize<ProductViewModel>(responseJson, _jsonOptions) ?? product;
+                var created = JsonSerializer.Deserialize<ProductViewModel>(responseJson, _jsonOptions);
+                return created ?? product;
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError($"Error creating product in API: {ex.Message}");
-                throw new Exception($"Error creating product in API: {ex.Message}", ex);
+                return product;
             }
         }
 
@@ -115,25 +93,22 @@ namespace WebApplication1.Services
         {
             try
             {
-                var url = $"{GetApiUrl()}/api/products/{id}";
+                var url = $"{_apiUrl}/api/products/{id}";
                 var json = JsonSerializer.Serialize(product);
-                var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await _httpClient.PutAsync(url, content);
+                var responseJson = await response.Content.ReadAsStringAsync();
 
                 if (!response.IsSuccessStatusCode)
-                {
-                    var errorContent = await response.Content.ReadAsStringAsync();
-                    throw new Exception($"API returned {response.StatusCode}: {errorContent}");
-                }
+                    return product;
 
-                var responseJson = await response.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<ProductViewModel>(responseJson, _jsonOptions) ?? product;
+                var updated = JsonSerializer.Deserialize<ProductViewModel>(responseJson, _jsonOptions);
+                return updated ?? product;
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError($"Error updating product in API: {ex.Message}");
-                throw new Exception($"Error updating product in API: {ex.Message}", ex);
+                return product;
             }
         }
 
@@ -141,31 +116,14 @@ namespace WebApplication1.Services
         {
             try
             {
-                var url = $"{GetApiUrl()}/api/products/{id}";
-                _logger.LogInformation($"Deleting product at: {url}");
-
+                var url = $"{_apiUrl}/api/products/{id}";
                 var response = await _httpClient.DeleteAsync(url);
 
-                if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-                {
-                    _logger.LogWarning($"Product with id {id} not found");
-                    return false;
-                }
-
-                if (!response.IsSuccessStatusCode)
-                {
-                    var errorContent = await response.Content.ReadAsStringAsync();
-                    _logger.LogError($"API returned status code: {response.StatusCode}. Content: {errorContent}");
-                    throw new Exception($"API returned {response.StatusCode}: {errorContent}");
-                }
-
-                _logger.LogInformation($"Product deleted successfully");
-                return true;
+                return response.IsSuccessStatusCode;
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError($"Error deleting product in API: {ex.Message}");
-                throw new Exception($"Error deleting product in API: {ex.Message}", ex);
+                return false;
             }
         }
     }
