@@ -1,0 +1,59 @@
+@host = https://localhost:7085
+@contentType = application/json
+
+### Get all products
+GET {{host}}/api/products
+Accept: {{contentType}}
+
+###
+
+### Get product by ID
+GET {{host}}/api/products/1
+Accept: {{contentType}}
+
+###
+
+### Create a new product - NO id field (auto-generated)
+POST {{host}}/api/products
+Content-Type: {{contentType}}
+
+{
+  "name": "Laptop",
+  "description": "High-performance laptop with 16GB RAM",
+  "price": 1299.99,
+  "stockQuantity": 5
+}
+
+###
+
+### Create another product
+POST {{host}}/api/products
+Content-Type: {{contentType}}
+
+{
+  "name": "Mouse",
+  "description": "Wireless mouse with USB receiver",
+  "price": 29.99,
+  "stockQuantity": 50
+}
+
+###
+
+### Update product - NO id field in body (id comes from URL)
+PUT {{host}}/api/products/1
+Content-Type: {{contentType}}
+
+{
+  "name": "Gaming Laptop",
+  "description": "High-performance gaming laptop with RTX 4090",
+  "price": 2499.99,
+  "stockQuantity": 3
+}
+
+###
+
+### Delete product
+DELETE {{host}}/api/products/1
+Accept: {{contentType}}
+
+###

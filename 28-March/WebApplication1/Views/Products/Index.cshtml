@@ -1,0 +1,107 @@
+@model IEnumerable<WebApplication1.Models.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Product Management";
+}
+
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h1>Product Management</h1>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-action="Create" class="btn btn-success btn-lg">
+                <span>➕</span> Add New Product
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Stock Quantity</th>
+                        <th style="width: 150px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>
+                                <strong>@product.Name</strong>
+                            </td>
+                            <td>
+                                @if (product.Description != null && product.Description.Length > 50)
+                                {
+                                    @(product.Description.Substring(0, 50) + "...")
+                                }
+                                else
+                                {
+                                    @product.Description
+                                }
+                            </td>
+                            <td>
+                                <span class="badge bg-info text-dark">$@product.Price.ToString("F2")</span>
+                            </td>
+                            <td>
+                                @if (product.StockQuantity > 0)
+                                {
+                                    <span class="badge bg-success">@product.StockQuantity</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">Out of Stock</span>
+                                }
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a asp-action="Details" asp-route-id="@product.Id" class="btn btn-sm btn-outline-info" title="View Details">
+                                        👁️
+                                    </a>
+                                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-sm btn-outline-warning" title="Edit">
+                                        ✏️
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-sm btn-outline-danger" title="Delete">
+                                        🗑️
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info" role="alert">
+            <h5>No products found.</h5>
+            <p>
+                <a asp-action="Create" class="btn btn-primary">Create your first product</a>
+            </p>
+        </div>
+    }
+</div>
+
