@@ -78,7 +78,7 @@ _TeamCity*
 .cr/personal
 FakesAssemblies/
 
-## --- Database & Temporary Files ---
+## --- Database & Temporary Files (Updated for EF Core) ---
 *.log
 *.tlog
 *.tmp
@@ -90,6 +90,12 @@ FakesAssemblies/
 ~$*
 *~
 *~.*
+
+# EF Core Migrations & SQLite specific
+*.db
+*.db-shm
+*.db-wal
+MigrationBackup/
 
 ## --- OS Specific ---
 .DS_Store
